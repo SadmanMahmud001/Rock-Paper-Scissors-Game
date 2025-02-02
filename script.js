@@ -143,7 +143,7 @@ function playerScore() {
 
 playerScore();
 
-// setTimeout(function () {
-//   document.querySelector(".loaderContainer").style.display = "none";
-//   document.querySelector("main").style.display = "block";
-// }, 3000);
+setTimeout(function () {
+  document.querySelector(".loaderContainer").style.display = "none";
+  document.querySelector("main").style.display = "block";
+}, 3000);
