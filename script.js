@@ -144,9 +144,7 @@ function playerScore() {
 
 playerScore();
 
-setTimeout(function () {
-  document.querySelector(".loaderContainer").style.display = "none";
-  document.querySelector("main").style.display = "block";
-}, 3000);
-
-//https://youtu.be/EerdGm-ehJQ?list=LL&t=35966
+// setTimeout(function () {
+//   document.querySelector(".loaderContainer").style.display = "none";
+//   document.querySelector("main").style.display = "block";
+// }, 3000);
