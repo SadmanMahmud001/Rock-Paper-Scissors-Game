@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #673ab7;
+  color: white;
+}
+
+body {
+  background: linear-gradient(135deg, #1e1e2f, #252546);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  display: none;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #f5f5f5;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.buttons button {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: #ffffff;
+  border: none;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(76, 175, 80, 0.6);
+}
+
+#playerScore {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 15px 0;
+  color: #e0e0e0;
+}
+
+#playerResult {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#choicess {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#choicess span {
+  font-size: 2rem;
+}
+
+.reset {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 6px 15px rgba(244, 67, 54, 0.4);
+}
+
+.reset:hover {
+  background: #e53935;
+  transform: scale(1.05);
+}
+
+.reset:active {
+  transform: scale(0.95);
+}
+
+.autoPlay {
+  background: #5cb65f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 6px 15px #5cb65f50;
+  margin-left: 10px;
+}
+
+.autoPlay:hover {
+  background: #4ea151;
+  transform: scale(1.05);
+}
+
+.autoPlay:active {
+  transform: scale(0.95);
+}
+
+.loaderContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+:root {
+  --hue: 223;
+  --bg: hsl(var(--hue), 10%, 90%);
+  --fg: hsl(var(--hue), 10%, 10%);
+  font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+}
+
+.pl {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+.pl__ring,
+.pl__ball {
+  animation: ring 2s ease-out infinite;
+}
+.pl__ball {
+  animation-name: ball;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(var(--hue), 10%, 10%);
+    --fg: hsl(var(--hue), 10%, 90%);
+  }
+}
+
+@keyframes ring {
+  from {
+    stroke-dasharray: 0 257 0 0 1 0 0 258;
+  }
+  25% {
+    stroke-dasharray: 0 0 0 0 257 0 258 0;
+  }
+  50%,
+  to {
+    stroke-dasharray: 0 0 0 0 0 515 0 0;
+  }
+}
+@keyframes ball {
+  from,
+  50% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: 1;
+  }
+  64% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: -109;
+  }
+  78% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: -145;
+  }
+  92% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: -157;
+  }
+  57%,
+  71%,
+  85%,
+  99%,
+  to {
+    animation-timing-function: ease-out;
+    stroke-dashoffset: -163;
+  }
+}
