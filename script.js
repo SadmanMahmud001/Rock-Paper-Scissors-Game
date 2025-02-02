@@ -54,7 +54,6 @@ document.body.addEventListener("keydown", (events) => {
   } else if (events.key === "s") {
     playGame("scissors");
   }
-  console.log(events.key);
 });
 
 function playGame(playerMove) {

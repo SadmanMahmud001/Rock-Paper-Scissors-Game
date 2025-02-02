@@ -1,7 +1,5 @@
-/* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-/* Reset & Base Styles */
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -15,12 +13,8 @@
 }
 
 body {
-  background: linear-gradient(135deg, #1e1e2f, #252546);
+  background: #1f1f33;
   color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
   padding: 10px;
 }
@@ -34,6 +28,8 @@ main {
   padding: 30px;
   box-shadow: 0 8px 32px #00000040;
   text-align: center;
+  margin: auto;
+  margin-top: 50px;
 }
 
 h1 {
